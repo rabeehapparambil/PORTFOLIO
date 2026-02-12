@@ -34,7 +34,7 @@ export default function Hero() {
                     initial={{ y: 100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-                    className="text-5xl md:text-8xl lg:text-9xl font-bold font-display tracking-tight leading-none"
+                    className="text-4xl md:text-8xl lg:text-9xl font-bold font-display tracking-tight leading-none"
                 >
                     I Don’t Design.
                     <br />
@@ -53,6 +53,33 @@ export default function Hero() {
                     <br className="hidden md:block" />
                     Specializing in Logo Design, Branding, and Print Media.
                 </motion.p>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.8 }}
+                    className="mt-10 flex flex-col md:flex-row gap-6 justify-center items-center"
+                >
+                    <a
+                        href="https://www.behance.net/gallery/240254723/PORTFOLIO"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group relative px-8 py-3 overflow-hidden rounded-full bg-white text-black font-semibold tracking-wide hover:scale-105 transition-transform duration-300"
+                    >
+                        <span className="relative z-10">View Portfolio</span>
+                        <div className="absolute inset-0 h-full w-full bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                        <span className="absolute inset-0 z-10 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Portfolio</span>
+                    </a>
+
+                    <a
+                        href="/resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-8 py-3 rounded-full border border-white/20 text-white font-semibold tracking-wide hover:bg-white/10 hover:border-white/40 transition-all duration-300 backdrop-blur-sm"
+                    >
+                        Resume
+                    </a>
+                </motion.div>
             </motion.div>
 
             {/* Background Elements */}

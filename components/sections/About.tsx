@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function About() {
     return (
-        <section id="about" className="py-24 px-6 md:px-12 bg-neutral-900 overflow-hidden">
+        <section id="about" className="py-16 md:py-24 px-6 md:px-12 bg-neutral-900 overflow-hidden">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
 
                 {/* Text Content */}
@@ -40,7 +40,7 @@ export default function About() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.4 }}
-                        className="mt-10 flex gap-4"
+                        className="mt-10 flex flex-wrap gap-4"
                     >
                         <div className="px-6 py-3 rounded-full border border-white/20 hover:bg-white hover:text-black transition-colors cursor-none">
                             Art Direction
