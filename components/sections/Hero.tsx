@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Hero() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -92,18 +93,22 @@ export default function Hero() {
                 initial={{ opacity: 0, x: -100 }}
                 animate={{ opacity: 1, x: 0, y: [0, -20, 0] }}
                 transition={{ duration: 1, delay: 0.5, y: { repeat: Infinity, duration: 6, ease: "easeInOut" } }}
-                className="absolute top-1/4 left-[5%] md:left-[10%] w-32 h-40 md:w-48 md:h-64 bg-neutral-800/50 backdrop-blur-sm border border-white/10 rounded-lg hidden lg:block z-0 rotate-[-6deg]"
+                className="absolute top-1/4 left-[5%] md:left-[10%] w-32 h-40 md:w-48 md:h-64 bg-neutral-800/50 backdrop-blur-sm border border-white/10 rounded-lg hidden lg:block z-0 rotate-[-6deg] overflow-hidden"
             >
-                <div className="w-full h-full flex items-center justify-center text-white/20 font-mono text-sm">Image 01</div>
+                <div className="relative w-full h-full">
+                    <Image src="/hero-1.jpg" alt="Portfolio Highlight 1" fill className="object-cover opacity-60 hover:opacity-80 transition-opacity duration-500" />
+                </div>
             </motion.div>
 
             <motion.div
                 initial={{ opacity: 0, x: -100 }}
                 animate={{ opacity: 1, x: 0, y: [0, 20, 0] }}
                 transition={{ duration: 1, delay: 0.7, y: { repeat: Infinity, duration: 7, ease: "easeInOut" } }}
-                className="absolute bottom-1/4 left-[8%] md:left-[15%] w-28 h-36 md:w-40 md:h-56 bg-neutral-800/50 backdrop-blur-sm border border-white/10 rounded-lg hidden lg:block z-0 rotate-[3deg]"
+                className="absolute bottom-1/4 left-[8%] md:left-[15%] w-28 h-36 md:w-40 md:h-56 bg-neutral-800/50 backdrop-blur-sm border border-white/10 rounded-lg hidden lg:block z-0 rotate-[3deg] overflow-hidden"
             >
-                <div className="w-full h-full flex items-center justify-center text-white/20 font-mono text-sm">Image 02</div>
+                <div className="relative w-full h-full">
+                    <Image src="/hero-2.png" alt="Portfolio Highlight 2" fill className="object-cover opacity-60 hover:opacity-80 transition-opacity duration-500" />
+                </div>
             </motion.div>
 
             {/* Floating Images - Right Side */}
@@ -111,18 +116,22 @@ export default function Hero() {
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0, y: [0, -15, 0] }}
                 transition={{ duration: 1, delay: 0.6, y: { repeat: Infinity, duration: 5, ease: "easeInOut" } }}
-                className="absolute top-[20%] right-[5%] md:right-[10%] w-36 h-48 md:w-56 md:h-72 bg-neutral-800/50 backdrop-blur-sm border border-white/10 rounded-lg hidden lg:block z-0 rotate-[6deg]"
+                className="absolute top-[20%] right-[5%] md:right-[10%] w-36 h-48 md:w-56 md:h-72 bg-neutral-800/50 backdrop-blur-sm border border-white/10 rounded-lg hidden lg:block z-0 rotate-[6deg] overflow-hidden"
             >
-                <div className="w-full h-full flex items-center justify-center text-white/20 font-mono text-sm">Image 03</div>
+                <div className="relative w-full h-full">
+                    <Image src="/hero-3.jpg" alt="Portfolio Highlight 3" fill className="object-cover opacity-60 hover:opacity-80 transition-opacity duration-500" />
+                </div>
             </motion.div>
 
             <motion.div
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0, y: [0, 25, 0] }}
                 transition={{ duration: 1, delay: 0.8, y: { repeat: Infinity, duration: 8, ease: "easeInOut" } }}
-                className="absolute bottom-[20%] right-[8%] md:right-[12%] w-32 h-40 md:w-44 md:h-60 bg-neutral-800/50 backdrop-blur-sm border border-white/10 rounded-lg hidden lg:block z-0 rotate-[-4deg]"
+                className="absolute bottom-[20%] right-[8%] md:right-[12%] w-32 h-40 md:w-44 md:h-60 bg-neutral-800/50 backdrop-blur-sm border border-white/10 rounded-lg hidden lg:block z-0 rotate-[-4deg] overflow-hidden"
             >
-                <div className="w-full h-full flex items-center justify-center text-white/20 font-mono text-sm">Image 04</div>
+                <div className="relative w-full h-full">
+                    <Image src="/hero-4.png" alt="Portfolio Highlight 4" fill className="object-cover opacity-60 hover:opacity-80 transition-opacity duration-500" />
+                </div>
             </motion.div>
 
             <motion.div
