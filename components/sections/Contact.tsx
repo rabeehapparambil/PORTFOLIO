@@ -18,6 +18,10 @@ export default function Contact() {
                 </motion.h2>
                 <p className="text-xl text-gray-400 mb-12">
                     Have a project in mind? Let&apos;s build something extraordinary together.
+                    <br />
+                    <span className="block mt-4 text-lg text-blue-400 font-mono">
+                        +91 9048102350
+                    </span>
                 </p>
 
                 <motion.form
